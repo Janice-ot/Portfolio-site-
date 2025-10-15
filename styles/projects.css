@@ -1,0 +1,725 @@
+body {background-color: rgb(220, 225, 230);}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1d5a78; /* very light blue */
+  color: #000;
+  overflow-x: hidden;
+}
+
+/* HERO / HEADER */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+background-color:#f7f7f8;
+height: 95px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+position: fixed;
+z-index: 9999;
+width: 100%;
+  position: fixed;
+  top: 0;
+z-index: 9999;
+}
+
+
+
+main {
+  padding-top: 160px !important;
+}
+
+
+
+
+.section__text_p1{
+  text-align: left;
+  font-size: 3rem;
+  padding-bottom: 40px;
+  color: #174d67;
+}
+
+
+
+
+
+
+
+
+
+ @media (max-width: 768px){
+
+.hero {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+html, body{
+  overscroll-behavior: none;
+}
+
+.hero-right .sandwich-icon {
+  font-size: 32px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bolder;
+}
+
+
+.nav-links {
+  display: flex;
+    flex-direction: column;
+  top: 0;
+  right: -250px;
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  background-color: #174d67;
+padding-top: 100px;
+ box-shadow: -4px 0 15px rgba(0,0,0,0.3);
+ transition: right 0.4s ease;
+ z-index: 1050;
+}
+
+.nav-links.active {
+  right: 0;
+}
+.nav-links a {
+  padding: 15px 20px;
+  border-bottom: 1px solid #070707;
+  margin:  0;
+  color: #fff !important;
+}
+
+.overlay .close-btn{
+  position: fixed;
+color: rgb(2, 2, 2);
+font-weight: 10px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+cursor: pointer;
+margin-left: 10px;
+font-size: 38px;
+display: inline-block;
+z-index: 1050;
+margin-top: -7px;
+
+}
+.overlay {
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  z-index: 1000;
+}
+
+.overlay.active {
+  display:block;
+}
+
+  /* PROJECT SECTION */
+
+  .projects-wrapper {
+    flex-direction: column;
+    gap: 100px;
+    padding: 0 40px;
+  }
+
+  /* ---------- mobile project card fixes (paste inside your @media) ---------- */
+
+.project-card {
+  background-color: #f0ecef;
+  border-radius: 15px;
+  padding: 20px;
+  flex: 1 1 100%;                  /* full width in column layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* pushes button to the bottom */
+  min-width: unset;
+  min-height: 320px;               /* gives room so buttons sit visually at the bottom; tweak as needed */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  border: 1.5px solid #70b6d1;
+  color:  #000 !important;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+/* make images full width and give consistent spacing */
+.project-image img,
+.project-image1 img,
+.project-image2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: 0 0 12px 0; /* space below image before title */
+  object-fit: cover;
+}
+
+/* compact, consistent spacing for titles & desc */
+.project-title,
+.project-title1 {
+  margin: 6px 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.project-desc,
+.project-desc1 {
+  margin: 6px 0 12px 0;
+  color: #174d67;
+  line-height: 1.4;
+}
+
+/* Buttons: remove absolute positioning; anchor to bottom-left via flex layout */
+.project-btn,
+.project-btn1 {
+  position: static;        /* remove any previously set top/bottom */
+  align-self: flex-start;  /* left aligned */
+  margin: 0;               /* reset any stray margins */
+  background-color: #000;
+  color: #e7e0e0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+/* optional hover effect kept */
+.project-btn:hover,
+.project-btn1:hover {
+  transform: scale(1.03);
+}
+
+/* leave .projects-wrapper { gap: 30px } as-is so cards keep spacing */
+
+
+  /* PAGE TITLE */
+  .page-title {
+    font-size: 29px;
+    margin-left: 10px;
+    top: 20px;
+    margin-bottom: -120px;
+    margin-top: 140px;
+    color: #e6eff1;
+  }
+
+  /* FOOTER */
+
+ 
+
+  footer .footer-nav {
+  display: flex;
+  flex-direction: row; /* you can also use column if you want stacked links */
+  gap: 15px; /* space between links */
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px; /* space from copyright text */
+}
+
+footer .footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold; /* make them look like desktop */
+}
+
+footer .footer-nav a:hover {
+  text-decoration: underline;
+}
+footer .footer-name {
+  font-size: 1.2rem; /* smaller than desktop but still visible */
+  font-weight: bold;
+  margin-bottom: 10px; /* space between name and links */
+  text-align: center;
+  display: block; /* ensures it stacks above the links */
+  color: #fff; /* keep visible on dark background */
+}
+
+
+ footer {
+  width: 100%;
+  padding: 40px 20px 20px; /* match desktop padding */
+  background-color: #000; /* keep original color */
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* stack elements vertically on mobile */
+  align-items: center;
+}
+
+
+
+  footer .copyright {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+}
+
+
+
+
+.hero-center .nav-links a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+position: relative;
+transition: color 0.3s ease;
+}
+.hero-center .nav-links a:hover {
+  color: #1b7db1;
+}
+
+.hero-center .nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #174d67;
+  transform: scaleX(0);
+  transform-origin: left;
+transition: transform 0.3s ease;
+}
+
+.hero-center .nav-links a:hover::after{
+  transform: scaleX(1);
+}
+
+.nav-links a.active {
+ color: #1b7db1;
+}
+.nav-links a.active::after {
+   transform: scaleX(1);
+   width: 100%;
+}
+@media (max-width: 768px) {
+
+  .project-desc1, .project-desc, .project-title, .project-title1 {
+    color: #174d67;
+  }
+}
+.hero-left .name {
+  font-weight: bold;
+  font-size:xx-large;
+  position: relative;
+}
+.sandwich-icon {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 28px;
+  display: none;
+}
+
+.lets-talk {
+display: none;
+padding: 8px 20px;
+background-color: #000;
+text-decoration: none;
+color: #fff;
+border-radius: 8px;
+font-weight: bold;
+text-align: center;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease;
+}
+@media (min-width: 769px) {
+  .lets-talk{
+    display: inline-block;
+  }
+
+  .lets-talk:hover {
+    background-color: #222;
+    transform: scale(1.05);
+  }
+.hero-right .underline {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: black;
+  margin-top: 2px;
+}
+
+/* MAIN PROJECTS SECTION */
+.close-btn{
+  display: none;
+}
+.page-title{
+font-size: 30px;
+justify: left;
+position: relative;
+top:27px;
+margin-left: 20px;
+white-space: nowrap;
+display: block;
+color: #ecf2f4;
+margin-bottom: -100px;
+margin-top: 125px;
+}
+
+.projects-main {
+  display: flex;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.projects-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+
+.project-card {
+  background-color: #e6eff1;
+  border-radius: 15px;
+  padding: 20px;
+  flex: 1 1 45%; /* side by side, responsive */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 300px;
+  height: 350px;
+  position: relative;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  border: 1.5px solid #76949d;
+}
+
+
+.project-image1 img {
+  position: absolute;
+  top: ;
+  width: 43%;
+  border-radius: 10px;
+  height: 50%;
+} 
+.project-image2 img {
+  width: 55%;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.project-title {
+  color: #040404;
+  margin: 15px 0 10px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+
+}
+
+.project-desc {
+  color: #070707;
+}
+
+.project-btn {
+  align-self: flex-end;
+  background-color: #000;
+  color: #e7e0e0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.project-btn1 {
+  align-self: flex-end;
+  background-color: #000;
+  color: #e7e0e0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  position: relative;
+  top: 209px;
+}
+
+.project-btn:hover {
+  transform: scale(1.05);
+}
+
+.project-btn1:hover {
+  transform: scale(1.05);
+}
+
+.project-title1{
+  position: relative;
+  top: 190px;
+}
+
+
+.project-desc1{
+position: relative;
+  top: 204px;
+}
+html, body {
+  overscroll-behavior: none;
+}
+
+
+
+
+/*HOME!*/
+
+.page-intro {
+  display: flex;
+  flex-direction:row;
+  align-self: center;
+  justify-content: center;
+}
+.page-intro .profile-pic {
+  width: 50%;
+  height: auto;
+  border-radius: 150px;
+}
+
+
+ .three-boxes {
+  display: flex;
+  gap: -10px;               /* spacing between boxes */
+  align-items: flex-end; /* keep heights independent */
+  justify-content: flex-start;
+  margin-top: 40px;        /* space from Skills/Portfolio above */
+}
+
+.three-boxes .box {
+  flex-grow: 0;            /* prevent growing to match siblings */
+  border-radius: 50px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+ margin-left: 25px;
+ margin-right: 25px ;
+}
+
+
+/* individual widths and heights */
+.box1 {
+  width: 20%;
+  height: 200px;
+  background-color: #0e0d0d;
+}
+
+.box2 {
+  width: 30%;
+  height: 200px;
+  background-color: #080808;
+}
+
+.box3 {
+  width: 48%;
+  height: 200px;
+  background-color: #7f9097;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+border: 1px solid black;
+display: flex;
+gap: 110px;
+align-items: center !important;
+}
+.box3-text {
+  text-align: left;
+  font-size: 50px;
+  color: #000;
+  font-weight: bold;
+  margin-top: -5px;
+}
+
+.box2-text {
+  text-align: center;
+  font-size: 20px;
+  color: #f9f9f9;
+  font-weight: bold;
+}
+
+
+.cv1 {
+
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: -40px;
+  bottom: -30px;
+
+}
+
+.ig,
+.linkedin,
+.github {
+  width: 80px;
+  height: 80px;
+}
+.work-together {
+  width: 100%;
+  background-color: #93ADB6;
+  color: #fffefe;
+  padding: 30px;
+  margin-top: 40px;
+  text-align: left;
+  border-radius: 40px;
+  max-width: 75%;
+  margin-right: auto;
+  height: 165px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+}
+
+/* General footer styles */
+.footer {
+  background-color: #7f9097 !important; /* dark background */
+  color: #fff;
+  padding: 50px 20px 20px 20px;
+  font-family: 'Arial', sans-serif;
+  margin-top: 100px;
+  height: 360px !important;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #80d1fd; /* highlight color */
+}
+
+/* Footer content - 3 columns */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-left: 20px;
+}
+
+.footer-column h2,
+.footer-column h3 {
+  margin-bottom: 15px;
+  color: #174d67;
+  font-size: 30px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-socials {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-socials a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #fffefe;
+  color: #627074;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background-color: #174d67;
+  transform: scale(1.1);
+}
+
+.footer a[href^="mailto"],.footer a[href^="callto"] {
+  color: #80d1fd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    height: 630px !important;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-column {
+    text-align: left;
+    margin-right: 60px;
+    margin-left: -20px;
+  }
+
+  .footer-socials a {
+    margin: 5px;
+  }
+}
+
+
+
+.fade-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1.5s ease-out, tranform 1.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform:scale(1); /* final position */
+}
+

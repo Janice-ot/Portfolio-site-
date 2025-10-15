@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janice Portfolio</title>
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" type="image/jpg" href="../assets/pfp-icon1.jpg">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="hero">
+    <div class="hero-left">
+      <div class="name">Janice<span class="underline"></span></div>
+    </div>
+    <div class="hero-center">
+      <nav class="nav-links">
+        <span class="close-btn">x</span>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+    <div class="hero-right">
+      <div class="sandwich-icon" id="menu-toggle">&#9776;</div>
+     <div class="lets-talk">
+        <a href="contact.html" class="lets-talk">Let's talk </a></div>
+    </div>
+
+  </header>
+<div class="overlay">
+  <span class="close-btn">x</span>
+</div>
+<main>
+  
+<div class="main-wrapper">
+  <!--  Contact info + Profiles -->
+  <div class="top-contact">
+      <div class="top-headers">
+        <h1 class="header fade-in">Contact<span class="intro"> info</span></h1>
+
+</div>
+    <!-- Contact info -->
+    <div class="contact-info">
+      <div class="contact-row">
+        <img src="assets/icons/tabler_mail.svg" alt="Icon mail" class="Icon-mail fade-in">
+        <div class="contact-text">
+          <p class="email fade-in">MAIL ME</p>
+          <p class="mail-address fade-in">janiceot12@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <img src="assets/icons/proicons_call.svg" alt="Icon call" class="Icon-call fade-in">
+        <div class="contact-text">
+          <p class="contact-me fade-in">PHONE</p>
+          <p class="contact fade-in">+237 6 72 75 51 46</p>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <img src="assets/icons/mingcute_location-line.svg" alt="Icon location" class="Icon-location fade-in">
+        <div class="contact-text">
+          <p class="address fade-in">LOCATION</p>
+          <p class="buea fade-in">Buea, Cameroon</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- My Profiles -->
+    <section class="profiles fade-in">
+      <h2>My Profiles</h2>
+      <div class="social-icons">
+        <a href="http://linkedin.com/in/janice-otang-836063348" target="_blank">
+          <img src="assets/icons/mdi_linkedin.svg" alt="LinkedIn" class="linkedin">
+        </a>
+        <a href="https://github.com/Janice-ot" target="_blank">
+          <img src="assets/icons/devicon_github.svg" alt="GitHub" class="github">
+        </a>
+        <a href="https://www.instagram.com/foreva_jae?igsh=MWZxMzIzODhsbWo1Yg%3D%3D&utm_source=qr" target="_blank">
+          <img src="assets/icons/basil_instagram-solid.svg" alt="ig" class="ig">
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Contact form -->
+   
+  <section class="contact">
+    <h1 class="title fade-in">Get in<span class="intro fade-in"> touch</span></h1>
+    <div class="form-box fade-in">
+      <form class="contact-form" action="https://formspree.io/f/mnnbepgd" method="POST">
+        <!-- Name -->
+        <label for="name"></label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+
+        <!-- Email -->
+        <label for="email"></label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <!-- Message + button -->
+        <label for="message">Your Message</label>
+        <div class="textarea-wrapper">
+          <input type="text" id="subject" name="subject" placeholder="Subject" class="subject-input" required>
+          <textarea id="message" name="message" placeholder="Your message" rows="14" required></textarea>
+          <button type="submit" class="send-btn">Send</button>
+        </div>
+      </form>
+      <p id="success-msg" > Thanks! your message was sent.</p>
+    </div>
+  </section>
+</div>
+
+
+</main>
+<!--footer-->
+<footer class="footer">
+  <div class="footer-content">
+    <!-- 1: About Me -->
+    <div class="footer-column">
+      <h2>Janice </h2>
+      <p class="desc"> I'm a web developer passionate about creating clean and interactive websites. I love bringing ideas to life through code.</p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul class="desc">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact Info -->
+    <div class="footer-column">
+      <h3>Contact info</h3>
+      <p class="desc">Email: <a href="mailto:janice@example.com">janiceot12@gmail.com</a></p>
+      <p class="desc">Phone: <a href="callto:mynum">+237 6 72 75 51 46</a></p>
+      <p class="desc">Location:Buea, Cameroon</p>
+    </div>
+  </div>
+
+  <!-- Rights + Social Icons -->
+  <div class="footer-bottom">
+    <p>© 2025 All Rights Reserved | Janice Otang</p>
+    <div class="footer-socials">
+      <a href="" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="http://linkedin.com/in/janice-otang-836063348" target="_blank">
+         <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      <a href="https://github.com/Janice-ot" target="_blank">
+       <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/foreva_jae?igsh=MWZxMzIzODhsbWo1Yg%3D%3D&utm_source=qr" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+  <script src="portfolio.js"></script>
+</body>
+</html>
